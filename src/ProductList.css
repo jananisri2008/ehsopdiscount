@@ -1,0 +1,70 @@
+/* Apply background image to the entire page */
+body {
+    /* background-image: url('/images/mall.jpg'); */
+    background-size: cover; /* Ensure the image covers the whole page */
+    background-position: center;
+    background-attachment: fixed; /* Keep the background fixed while scrolling */
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Product List container */
+  .product-list {
+    display: flex;
+    flex-wrap: wrap; /* Allows the items to wrap into new rows when needed */
+    justify-content: center; /* Center the products horizontally */
+    align-items: center; /* Center the products vertically */
+    padding: 0;
+    list-style-type: none;
+  }
+  
+  /* Product item card styling */
+  .product-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    width: 200px;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center; /* Ensure text is centered inside each item */
+  }
+  
+  /* Product image */
+  .product-item img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    margin-bottom: 10px;
+  }
+  
+  /* Product name and price */
+  .product-item h3 {
+    font-size: 16px;
+    margin: 0;
+  }
+  
+  .product-item p {
+    font-size: 14px;
+    color: #666;
+  }
+  
+  /* Add to Cart button */
+  .add-to-cart-btn {
+    margin-top: 10px;
+    padding: 5px 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .add-to-cart-btn:hover {
+    background-color: #45a049;
+  }
+  
