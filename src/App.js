@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import ProductList from './ProductList';
 import Cart from './Cart';
+import './App.css';
 
 const App = () => {
   const [cart, setCart] = useState([]);
@@ -11,15 +12,17 @@ const App = () => {
     { id: 3, name: 'Product 3', price: 15, image: '/images/product3.jpg' },
   ];
 
-  const addToCart = (product) => {
+  const addToCart = (product, quantity = 1) => {
     setCart((prevCart) => {
       const existingProduct = prevCart.find((item) => item.id === product.id);
       if (existingProduct) {
         return prevCart.map((item) =>
-          item.id === product.id ? { ...item, quantity: item.quantity + 1 } : item
+          item.id === product.id
+            ? { ...item, quantity: item.quantity + quantity }
+            : item
         );
       }
-      return [...prevCart, { ...product, quantity: 1 }];
+      return [...prevCart, { ...product, quantity }];
     });
   };
 
@@ -37,15 +40,13 @@ const App = () => {
 
   const calculateTotal = () => {
     let total = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
-    // Check for discounts
     if (total > 50) {
-      total *= 0.9; // Apply 10% off if total is above $50
+      total *= 0.9; 
     }
     return total.toFixed(2);
   };
 
   const getOffer = () => {
-    // Example offers:
     const buy2Get1Offer = cart.some((item) => item.quantity >= 2);
     const discountOffer = cart.reduce((sum, item) => sum + item.price * item.quantity, 0) > 50;
 
@@ -53,7 +54,7 @@ const App = () => {
       return 'Buy 2 Get 1 Free!';
     }
     if (discountOffer) {
-      return '10% Off on Orders Above $50';
+      return '10% Offer for Orders Above ₹50';
     }
     return null;
   };

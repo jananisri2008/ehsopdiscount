@@ -1,9 +1,8 @@
-/* Apply background image to the entire page */
 body {
     /* background-image: url('/images/mall.jpg'); */
-    background-size: cover; /* Ensure the image covers the whole page */
+    background-size: cover;
     background-position: center;
-    background-attachment: fixed; /* Keep the background fixed while scrolling */
+    background-attachment: fixed; 
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
@@ -12,9 +11,9 @@ body {
   /* Product List container */
   .product-list {
     display: flex;
-    flex-wrap: wrap; /* Allows the items to wrap into new rows when needed */
-    justify-content: center; /* Center the products horizontally */
-    align-items: center; /* Center the products vertically */
+    flex-wrap: wrap; 
+    justify-content: center; 
+    align-items: center; 
     padding: 0;
     list-style-type: none;
   }
@@ -31,7 +30,7 @@ body {
     width: 200px;
     background-color: #f9f9f9;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    text-align: center; /* Ensure text is centered inside each item */
+    text-align: center; 
   }
   
   /* Product image */
