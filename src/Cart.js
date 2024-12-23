@@ -69,7 +69,7 @@
 
 // export default Cart;
 import React from 'react';
-import './Cart.css'; // Add this import for styling
+import './Cart.css'; 
 
 const Cart = ({ cart, removeFromCart, total, offer }) => {
   return (
